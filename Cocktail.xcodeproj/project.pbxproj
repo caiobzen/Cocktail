@@ -12,8 +12,9 @@
 		EB233B1E225D6D7F0015D80A /* Cocktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB233B14225D6D7E0015D80A /* Cocktail.framework */; };
 		EB233B23225D6D7F0015D80A /* CocktailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B22225D6D7F0015D80A /* CocktailTests.swift */; };
 		EB233B25225D6D7F0015D80A /* Cocktail.h in Headers */ = {isa = PBXBuildFile; fileRef = EB233B17225D6D7E0015D80A /* Cocktail.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB233B30225D7A030015D80A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B2F225D7A030015D80A /* Cocktail.swift */; };
+		EB233B30225D7A030015D80A /* CocktailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B2F225D7A030015D80A /* CocktailAPI.swift */; };
 		EB233B32225D7B0B0015D80A /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B31225D7B0B0015D80A /* Fetcher.swift */; };
+		EB233B36225D7EA90015D80A /* margherita.json in Resources */ = {isa = PBXBuildFile; fileRef = EB233B35225D7EA90015D80A /* margherita.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,9 @@
 		EB233B1D225D6D7F0015D80A /* CocktailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB233B22225D6D7F0015D80A /* CocktailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTests.swift; sourceTree = "<group>"; };
 		EB233B24225D6D7F0015D80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB233B2F225D7A030015D80A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		EB233B2F225D7A030015D80A /* CocktailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPI.swift; sourceTree = "<group>"; };
 		EB233B31225D7B0B0015D80A /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		EB233B35225D7EA90015D80A /* margherita.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = margherita.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		EB233B21225D6D7F0015D80A /* CocktailTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB233B34225D7E870015D80A /* Resources */,
 				EB233B22225D6D7F0015D80A /* CocktailTests.swift */,
 				EB233B24225D6D7F0015D80A /* Info.plist */,
 			);
@@ -126,10 +129,18 @@
 		EB233B2E225D79F20015D80A /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EB233B2F225D7A030015D80A /* Cocktail.swift */,
+				EB233B2F225D7A030015D80A /* CocktailAPI.swift */,
 				EB233B31225D7B0B0015D80A /* Fetcher.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		EB233B34225D7E870015D80A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB233B35225D7EA90015D80A /* margherita.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB233B36225D7EA90015D80A /* margherita.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB233B30225D7A030015D80A /* Cocktail.swift in Sources */,
+				EB233B30225D7A030015D80A /* CocktailAPI.swift in Sources */,
 				EB233B32225D7B0B0015D80A /* Fetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

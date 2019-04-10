@@ -10,13 +10,13 @@ class CocktailTests: QuickSpec {
         describe(".Cocktail") {
             context("#init") {
                 it("creates a Cocktail instance") {
-                    let cocktail = Cocktail()
+                    let cocktail = CocktailAPI()
                     expect(cocktail).toNot(beNil())
                 }
                 
                 it("has a fetching mechanism") {
                     let fetcher = Fetcher()
-                    let cocktail = CocktailMock(with: fetcher)
+                    let cocktail = CocktailAPIMock(with: fetcher)
                     expect(cocktail._fetcher).toNot(beNil())
                 }
             }
@@ -25,12 +25,12 @@ class CocktailTests: QuickSpec {
                 context("for a cocktail name with success") {
                     it("returns a list of drinks") {
                         let fetcher = Fetcher()
-                        let cocktail = CocktailMock(with: fetcher)
-                        var results: [Any] = []
+                        let cocktail = CocktailAPIMock(with: fetcher)
+                        var response: CocktailResponse? = nil
                         cocktail.search(byName: "margherita") { result in
-                            results = result
+                            response = result
                         }
-                        expect(results).toNot(beEmpty())
+                        expect(response?.cocktails.count).to(equal(5))
                     }
                 }
             }
@@ -38,12 +38,16 @@ class CocktailTests: QuickSpec {
     }
 }
 
-class CocktailMock: Cocktail {
+class CocktailAPIMock: CocktailAPI {
     var _fetcher: Fetcher? {
         return fetcher
     }
     
-    override func search(byName: String, completion: @escaping ([Any]) -> Void) {
-        completion([[:]])
+    override func search(byName: String, completion: @escaping (CocktailResponse) -> Void) {
+        let testBundle = Bundle(for: type(of: self))
+        let jsonUrl = testBundle.url(forResource: "margherita", withExtension: "json")!
+        let data = try! Data(contentsOf: jsonUrl)
+        let cocktails = try! JSONDecoder().decode(CocktailResponse.self, from: data)
+        completion(cocktails)
     }
 }
