@@ -6,7 +6,16 @@ class Fetcher {
         self.urlSession = urlSession
     }
     
-    func fetch() {
+    func fetch(_ endpoint: Endpoint, completion: (Codable) -> Void) {
         
     }
+}
+
+struct Endpoint {
+    let path: String
+    let param: String
+}
+
+struct ResponseError: Codable {
+
 }

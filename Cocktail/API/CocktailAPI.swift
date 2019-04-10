@@ -6,6 +6,9 @@ class CocktailAPI {
     }
     
     func search(byName: String, completion: @escaping (CocktailResponse) -> Void) {
-        fetcher?.fetch()
+        let endpoint = Endpoint(path: "", param: "")
+        fetcher?.fetch(endpoint) { response in
+            completion(response as! CocktailResponse)
+        }
     }
 }
