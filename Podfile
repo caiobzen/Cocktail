@@ -5,6 +5,7 @@ target 'Cocktail' do
 
   target 'CocktailTests' do
     inherit! :search_paths
+    use_frameworks!
     pod 'Nimble'
     pod 'Quick'
   end
