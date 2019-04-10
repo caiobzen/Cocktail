@@ -6,7 +6,7 @@ class Fetcher {
         self.urlSession = urlSession
     }
     
-    func fetch(_ endpoint: Endpoint, completion: (Codable) -> Void) {
+    func fetch(_ endpoint: Endpoint, completion: (Data) -> Void) {
         
     }
 }

@@ -20,6 +20,7 @@
 		EB233B3F225D857E0015D80A /* FetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B3E225D857E0015D80A /* FetcherMock.swift */; };
 		EB233B41225D858E0015D80A /* CocktailAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B40225D858E0015D80A /* CocktailAPIMock.swift */; };
 		EB233B44225E06570015D80A /* FetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B43225E06570015D80A /* FetcherTests.swift */; };
+		EB233B79225EB82D0015D80A /* error.json in Resources */ = {isa = PBXBuildFile; fileRef = EB233B78225EB82D0015D80A /* error.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		EB233B3E225D857E0015D80A /* FetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherMock.swift; sourceTree = "<group>"; };
 		EB233B40225D858E0015D80A /* CocktailAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIMock.swift; sourceTree = "<group>"; };
 		EB233B43225E06570015D80A /* FetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherTests.swift; sourceTree = "<group>"; };
+		EB233B78225EB82D0015D80A /* error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = error.json; sourceTree = "<group>"; };
 		EEAC46BE26365C29E1461D4E /* Pods-Cocktail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cocktail/Pods-Cocktail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EB233B35225D7EA90015D80A /* margherita.json */,
+				EB233B78225EB82D0015D80A /* error.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB233B79225EB82D0015D80A /* error.json in Resources */,
 				EB233B36225D7EA90015D80A /* margherita.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

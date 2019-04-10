@@ -25,7 +25,7 @@ class CocktailTests: QuickSpec {
                 context("for a cocktail name with success") {
                     it("returns a list of drinks") {
                         let fetcher = FetcherMock()
-                        let cocktail = CocktailAPIMock(with: fetcher)
+                        let cocktail = CocktailAPI(with: fetcher)
                         var response: CocktailResponse? = nil
                         
                         cocktail.search(byName: "margherita") { result in
@@ -33,7 +33,7 @@ class CocktailTests: QuickSpec {
                         }
                         
                         expect(fetcher.didCallFetch).to(beTrue())
-                        expect(response?.cocktails.count).to(equal(5))
+                        expect(response?.cocktails.count).toEventually(equal(5))
                     }
                 }
             }

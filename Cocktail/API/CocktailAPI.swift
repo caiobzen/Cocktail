@@ -8,7 +8,9 @@ class CocktailAPI {
     func search(byName: String, completion: @escaping (CocktailResponse) -> Void) {
         let endpoint = Endpoint(path: "", param: "")
         fetcher?.fetch(endpoint) { response in
-            completion(response as! CocktailResponse)
+            if let response = try? JSONDecoder().decode(CocktailResponse.self, from: response) {
+                completion(response)
+            }
         }
     }
 }

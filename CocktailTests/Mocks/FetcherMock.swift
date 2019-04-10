@@ -12,11 +12,25 @@ class FetcherMock: Fetcher {
         lastEndpoint = nil
     }
     
-    override func fetch(_ endpoint: Endpoint, completion: (Codable) -> Void) {
+    private var successResponse: Data {
+        let testBundle = Bundle(for: type(of: self))
+        let jsonUrl = testBundle.url(forResource: "margherita", withExtension: "json")!
+        let data = try! Data(contentsOf: jsonUrl)
+        return data
+    }
+    
+    private var errorResponse: Data {
+        let testBundle = Bundle(for: type(of: self))
+        let jsonUrl = testBundle.url(forResource: "error", withExtension: "json")!
+        let data = try! Data(contentsOf: jsonUrl)
+        return data
+    }
+    
+    override func fetch(_ endpoint: Endpoint, completion: (Data) -> Void) {
         didCallFetch = true
         lastEndpoint = endpoint
         
-        let response: Codable = shouldFail ? ResponseError() : CocktailResponse(cocktails: [])
+        let response = shouldFail ? errorResponse: successResponse
         completion(response)
     }
 }

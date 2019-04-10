@@ -53,7 +53,7 @@ class FetcherTests: QuickSpec {
                         var responseObject: Codable?
                         
                         fetcher.fetch(endpoint) { response in
-                            responseObject = response
+                            responseObject = try! JSONDecoder().decode(ResponseError.self, from: response)
                         }
                         
                         expect(responseObject).toEventuallyNot(beNil())
