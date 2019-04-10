@@ -36,9 +36,11 @@ class FetcherTests: QuickSpec {
                     it("returns an object that conforms to Codable") {
                         let endpoint = Endpoint(path: "someEndpoint", param: "someParam")
                         var responseObject: Codable?
+                        
                         fetcher.fetch(endpoint) { response in
                             responseObject = response
                         }
+                        
                         expect(responseObject).toEventuallyNot(beNil())
                         expect(responseObject).to(beAKindOf(Codable.self))
                     }
@@ -49,9 +51,11 @@ class FetcherTests: QuickSpec {
                         fetcher.shouldFail = true
                         let endpoint = Endpoint(path: "someEndpoint", param: "someParam")
                         var responseObject: Codable?
+                        
                         fetcher.fetch(endpoint) { response in
                             responseObject = response
                         }
+                        
                         expect(responseObject).toEventuallyNot(beNil())
                         expect(responseObject).to(beAKindOf(ResponseError.self))
                     }
