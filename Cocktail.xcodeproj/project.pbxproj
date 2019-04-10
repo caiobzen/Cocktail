@@ -501,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BD9B4200DE54BC08A4A6604 /* Pods-CocktailTests.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 74SMNA83A6;
@@ -512,6 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccorrea.CocktailTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -520,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25E4ADFFB6FD5BC5657931B5 /* Pods-CocktailTests.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 74SMNA83A6;
@@ -531,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccorrea.CocktailTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
