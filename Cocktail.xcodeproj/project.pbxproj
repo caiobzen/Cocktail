@@ -17,6 +17,8 @@
 		EB233B36225D7EA90015D80A /* margherita.json in Resources */ = {isa = PBXBuildFile; fileRef = EB233B35225D7EA90015D80A /* margherita.json */; };
 		EB233B3A225D83920015D80A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B39225D83920015D80A /* Cocktail.swift */; };
 		EB233B3C225D83A10015D80A /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B3B225D83A10015D80A /* CocktailResponse.swift */; };
+		EB233B3F225D857E0015D80A /* FetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B3E225D857E0015D80A /* FetcherMock.swift */; };
+		EB233B41225D858E0015D80A /* CocktailAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B40225D858E0015D80A /* CocktailAPIMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EB233B35225D7EA90015D80A /* margherita.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = margherita.json; sourceTree = "<group>"; };
 		EB233B39225D83920015D80A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		EB233B3B225D83A10015D80A /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
+		EB233B3E225D857E0015D80A /* FetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherMock.swift; sourceTree = "<group>"; };
+		EB233B40225D858E0015D80A /* CocktailAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		EB233B21225D6D7F0015D80A /* CocktailTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB233B3D225D85710015D80A /* Mocks */,
 				EB233B34225D7E870015D80A /* Resources */,
 				EB233B22225D6D7F0015D80A /* CocktailTests.swift */,
 				EB233B24225D6D7F0015D80A /* Info.plist */,
@@ -155,6 +160,15 @@
 				EB233B3B225D83A10015D80A /* CocktailResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EB233B3D225D85710015D80A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EB233B3E225D857E0015D80A /* FetcherMock.swift */,
+				EB233B40225D858E0015D80A /* CocktailAPIMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +367,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB233B23225D6D7F0015D80A /* CocktailTests.swift in Sources */,
+				EB233B41225D858E0015D80A /* CocktailAPIMock.swift in Sources */,
+				EB233B3F225D857E0015D80A /* FetcherMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
