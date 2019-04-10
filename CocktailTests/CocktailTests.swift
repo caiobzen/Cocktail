@@ -24,12 +24,13 @@ class CocktailTests: QuickSpec {
             context("#search") {
                 context("for a cocktail name with success") {
                     it("returns a list of drinks") {
-                        let fetcher = Fetcher()
+                        let fetcher = FetcherMock()
                         let cocktail = CocktailAPIMock(with: fetcher)
                         var response: CocktailResponse? = nil
                         cocktail.search(byName: "margherita") { result in
                             response = result
                         }
+                        expect(fetcher.didCallFetch).to(beTrue())
                         expect(response?.cocktails.count).to(equal(5))
                     }
                 }
@@ -38,12 +39,22 @@ class CocktailTests: QuickSpec {
     }
 }
 
+class FetcherMock: Fetcher {
+    var didCallFetch = false
+    
+    override func fetch() {
+        didCallFetch = true
+    }
+}
+
 class CocktailAPIMock: CocktailAPI {
+    
     var _fetcher: Fetcher? {
         return fetcher
     }
     
-    override func search(byName: String, completion: @escaping (CocktailResponse) -> Void) {
+    override func search(byName name: String, completion: @escaping (CocktailResponse) -> Void) {
+        super.search(byName: name, completion: completion)
         let testBundle = Bundle(for: type(of: self))
         let jsonUrl = testBundle.url(forResource: "margherita", withExtension: "json")!
         let data = try! Data(contentsOf: jsonUrl)

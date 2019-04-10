@@ -15,6 +15,8 @@
 		EB233B30225D7A030015D80A /* CocktailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B2F225D7A030015D80A /* CocktailAPI.swift */; };
 		EB233B32225D7B0B0015D80A /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B31225D7B0B0015D80A /* Fetcher.swift */; };
 		EB233B36225D7EA90015D80A /* margherita.json in Resources */ = {isa = PBXBuildFile; fileRef = EB233B35225D7EA90015D80A /* margherita.json */; };
+		EB233B3A225D83920015D80A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B39225D83920015D80A /* Cocktail.swift */; };
+		EB233B3C225D83A10015D80A /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B3B225D83A10015D80A /* CocktailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		EB233B2F225D7A030015D80A /* CocktailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPI.swift; sourceTree = "<group>"; };
 		EB233B31225D7B0B0015D80A /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		EB233B35225D7EA90015D80A /* margherita.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = margherita.json; sourceTree = "<group>"; };
+		EB233B39225D83920015D80A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		EB233B3B225D83A10015D80A /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		EB233B2E225D79F20015D80A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EB233B38225D83820015D80A /* Models */,
 				EB233B2F225D7A030015D80A /* CocktailAPI.swift */,
 				EB233B31225D7B0B0015D80A /* Fetcher.swift */,
 			);
@@ -141,6 +146,15 @@
 				EB233B35225D7EA90015D80A /* margherita.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB233B38225D83820015D80A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB233B39225D83920015D80A /* Cocktail.swift */,
+				EB233B3B225D83A10015D80A /* CocktailResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +343,8 @@
 			files = (
 				EB233B30225D7A030015D80A /* CocktailAPI.swift in Sources */,
 				EB233B32225D7B0B0015D80A /* Fetcher.swift in Sources */,
+				EB233B3C225D83A10015D80A /* CocktailResponse.swift in Sources */,
+				EB233B3A225D83920015D80A /* Cocktail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
