@@ -19,6 +19,7 @@
 		EB233B3C225D83A10015D80A /* CocktailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B3B225D83A10015D80A /* CocktailResponse.swift */; };
 		EB233B3F225D857E0015D80A /* FetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B3E225D857E0015D80A /* FetcherMock.swift */; };
 		EB233B41225D858E0015D80A /* CocktailAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B40225D858E0015D80A /* CocktailAPIMock.swift */; };
+		EB233B44225E06570015D80A /* FetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B43225E06570015D80A /* FetcherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EB233B3B225D83A10015D80A /* CocktailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponse.swift; sourceTree = "<group>"; };
 		EB233B3E225D857E0015D80A /* FetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherMock.swift; sourceTree = "<group>"; };
 		EB233B40225D858E0015D80A /* CocktailAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIMock.swift; sourceTree = "<group>"; };
+		EB233B43225E06570015D80A /* FetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,9 +129,9 @@
 		EB233B21225D6D7F0015D80A /* CocktailTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB233B42225E06490015D80A /* Unit */,
 				EB233B3D225D85710015D80A /* Mocks */,
 				EB233B34225D7E870015D80A /* Resources */,
-				EB233B22225D6D7F0015D80A /* CocktailTests.swift */,
 				EB233B24225D6D7F0015D80A /* Info.plist */,
 			);
 			path = CocktailTests;
@@ -169,6 +171,15 @@
 				EB233B40225D858E0015D80A /* CocktailAPIMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EB233B42225E06490015D80A /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				EB233B22225D6D7F0015D80A /* CocktailTests.swift */,
+				EB233B43225E06570015D80A /* FetcherTests.swift */,
+			);
+			path = Unit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB233B23225D6D7F0015D80A /* CocktailTests.swift in Sources */,
+				EB233B44225E06570015D80A /* FetcherTests.swift in Sources */,
 				EB233B41225D858E0015D80A /* CocktailAPIMock.swift in Sources */,
 				EB233B3F225D857E0015D80A /* FetcherMock.swift in Sources */,
 			);
