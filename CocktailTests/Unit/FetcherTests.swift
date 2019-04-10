@@ -28,8 +28,8 @@ class FetcherTests: QuickSpec {
 
                     fetcher.fetch(endpoint) { _ in }
                     
-                    expect(fetcher.lastEndpoint.path).toEventually(equal("/endpoint"))
-                    expect(fetcher.lastEndpoint.param).toEventually(equal("foo"))
+                    expect(fetcher.lastEndpoint?.path).toEventually(equal("/endpoint"))
+                    expect(fetcher.lastEndpoint?.param).toEventually(equal("foo"))
                 }
                 
                 context("with success") {
