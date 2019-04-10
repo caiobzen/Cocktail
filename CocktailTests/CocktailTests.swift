@@ -20,6 +20,20 @@ class CocktailTests: QuickSpec {
                     expect(cocktail._fetcher).toNot(beNil())
                 }
             }
+            
+            context("#search") {
+                context("for a cocktail name with success") {
+                    it("returns a list of drinks") {
+                        let fetcher = Fetcher()
+                        let cocktail = CocktailMock(with: fetcher)
+                        var results: [Any] = []
+                        cocktail.search(byName: "margherita") { result in
+                            results = result
+                        }
+                        expect(results).toNot(beEmpty())
+                    }
+                }
+            }
         }
     }
 }
@@ -27,5 +41,9 @@ class CocktailTests: QuickSpec {
 class CocktailMock: Cocktail {
     var _fetcher: Fetcher? {
         return fetcher
+    }
+    
+    override func search(byName: String, completion: @escaping ([Any]) -> Void) {
+        completion([[:]])
     }
 }
