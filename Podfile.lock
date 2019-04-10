@@ -1,5 +1,5 @@
 PODS:
-  - Nimble (7.3.2)
+  - Nimble (7.3.3)
   - Quick (1.3.2)
 
 DEPENDENCIES:
@@ -12,7 +12,7 @@ SPEC REPOS:
     - Quick
 
 SPEC CHECKSUMS:
-  Nimble: 5e94a8cacb355943c6c87198035dc4adbb0f10e4
+  Nimble: 3b434b1e7d0a92603a13550a82880b0d952f518e
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
 
 PODFILE CHECKSUM: 49e8cfdec223aa9617910ab2f280d73d04dc1c6e
