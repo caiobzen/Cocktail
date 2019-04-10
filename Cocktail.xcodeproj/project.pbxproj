@@ -13,6 +13,7 @@
 		EB233B23225D6D7F0015D80A /* CocktailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B22225D6D7F0015D80A /* CocktailTests.swift */; };
 		EB233B25225D6D7F0015D80A /* Cocktail.h in Headers */ = {isa = PBXBuildFile; fileRef = EB233B17225D6D7E0015D80A /* Cocktail.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB233B30225D7A030015D80A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B2F225D7A030015D80A /* Cocktail.swift */; };
+		EB233B32225D7B0B0015D80A /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B31225D7B0B0015D80A /* Fetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		EB233B22225D6D7F0015D80A /* CocktailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTests.swift; sourceTree = "<group>"; };
 		EB233B24225D6D7F0015D80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB233B2F225D7A030015D80A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
+		EB233B31225D7B0B0015D80A /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				EB233B2F225D7A030015D80A /* Cocktail.swift */,
+				EB233B31225D7B0B0015D80A /* Fetcher.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB233B30225D7A030015D80A /* Cocktail.swift in Sources */,
+				EB233B32225D7B0B0015D80A /* Fetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
