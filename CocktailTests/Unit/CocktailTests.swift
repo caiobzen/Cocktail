@@ -27,9 +27,11 @@ class CocktailTests: QuickSpec {
                         let fetcher = FetcherMock()
                         let cocktail = CocktailAPIMock(with: fetcher)
                         var response: CocktailResponse? = nil
+                        
                         cocktail.search(byName: "margherita") { result in
                             response = result
                         }
+                        
                         expect(fetcher.didCallFetch).to(beTrue())
                         expect(response?.cocktails.count).to(equal(5))
                     }
