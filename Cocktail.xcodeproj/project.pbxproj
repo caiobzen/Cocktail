@@ -12,6 +12,7 @@
 		EB233B1E225D6D7F0015D80A /* Cocktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB233B14225D6D7E0015D80A /* Cocktail.framework */; };
 		EB233B23225D6D7F0015D80A /* CocktailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B22225D6D7F0015D80A /* CocktailTests.swift */; };
 		EB233B25225D6D7F0015D80A /* Cocktail.h in Headers */ = {isa = PBXBuildFile; fileRef = EB233B17225D6D7E0015D80A /* Cocktail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB233B30225D7A030015D80A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B2F225D7A030015D80A /* Cocktail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		EB233B1D225D6D7F0015D80A /* CocktailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocktailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB233B22225D6D7F0015D80A /* CocktailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTests.swift; sourceTree = "<group>"; };
 		EB233B24225D6D7F0015D80A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB233B2F225D7A030015D80A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		EB233B16225D6D7E0015D80A /* Cocktail */ = {
 			isa = PBXGroup;
 			children = (
+				EB233B2E225D79F20015D80A /* API */,
 				EB233B17225D6D7E0015D80A /* Cocktail.h */,
 				EB233B18225D6D7E0015D80A /* Info.plist */,
 			);
@@ -116,6 +119,14 @@
 				EB233B24225D6D7F0015D80A /* Info.plist */,
 			);
 			path = CocktailTests;
+			sourceTree = "<group>";
+		};
+		EB233B2E225D79F20015D80A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EB233B2F225D7A030015D80A /* Cocktail.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 				TargetAttributes = {
 					EB233B13225D6D7E0015D80A = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					EB233B1C225D6D7F0015D80A = {
 						CreatedOnToolsVersion = 10.2;
@@ -300,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB233B30225D7A030015D80A /* Cocktail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3582A00B2F3359F04E8B3B3A /* Pods-Cocktail.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -466,6 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ccorrea.Cocktail;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -474,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E19614512A63735343B51509 /* Pods-Cocktail.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -501,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BD9B4200DE54BC08A4A6604 /* Pods-CocktailTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -522,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25E4ADFFB6FD5BC5657931B5 /* Pods-CocktailTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
