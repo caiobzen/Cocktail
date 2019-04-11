@@ -6,8 +6,8 @@ class CocktailAPIMock: CocktailAPI {
         return fetcher
     }
     
-    override func search(byName name: String, completion: @escaping (CocktailResponse) -> Void) {
-        super.search(byName: name, completion: completion)
+    override func searchBy(drinkName: String, completion: @escaping (CocktailResponse) -> Void) {
+        super.searchBy(drinkName: drinkName, completion: completion)
         let testBundle = Bundle(for: type(of: self))
         let jsonUrl = testBundle.url(forResource: "margherita", withExtension: "json")!
         let data = try! Data(contentsOf: jsonUrl)

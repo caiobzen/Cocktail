@@ -49,13 +49,14 @@ class FetcherTests: QuickSpec {
                 context("with failure") {
                     it("returns an error") {
                         fetcher.shouldFail = true
-                        let endpoint = Endpoint(path: "someEndpoint", param: "someParam")
+                        let endpoint = Endpoint(path: "someEndpoint", param: "?=someParam")
                         var responseObject: Codable?
                         
                         fetcher.fetch(endpoint) { response in
-                            responseObject = try! JSONDecoder().decode(ResponseError.self, from: response)
+                            responseObject = try! JSONDecoder().decode(ResponseError.self, from: response!)
                         }
                         
+                        expect(endpoint.url.absoluteString).to(equal("https://www.thecocktaildb.com/api/json/v1/1/someEndpoint?=someParam"))
                         expect(responseObject).toEventuallyNot(beNil())
                         expect(responseObject).to(beAKindOf(ResponseError.self))
                     }

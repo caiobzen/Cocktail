@@ -1,15 +1,16 @@
-class CocktailAPI {
+public class CocktailAPI {
     let fetcher: Fetcher?
     
-    init(with fetcher: Fetcher? = nil) {
+    public init(with fetcher: Fetcher? = nil) {
         self.fetcher = fetcher
     }
     
-    func search(byName: String, completion: @escaping (CocktailResponse) -> Void) {
-        let endpoint = Endpoint(path: "", param: "")
+    public func searchBy(drinkName: String, completion: @escaping (CocktailResponse) -> Void) {
+        let endpoint = Endpoint(path: "search.php?s=", param: drinkName)
         fetcher?.fetch(endpoint) { response in
-            if let response = try? JSONDecoder().decode(CocktailResponse.self, from: response) {
-                completion(response)
+            if let response = response,
+                let decodedObject = try? JSONDecoder().decode(CocktailResponse.self, from: response) {
+                completion(decodedObject)
             }
         }
     }

@@ -28,7 +28,7 @@ class CocktailTests: QuickSpec {
                         let cocktail = CocktailAPI(with: fetcher)
                         var response: CocktailResponse? = nil
                         
-                        cocktail.search(byName: "margherita") { result in
+                        cocktail.searchBy(drinkName: "margherita") { result in
                             response = result
                         }
                         

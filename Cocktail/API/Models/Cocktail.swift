@@ -1,3 +1,3 @@
-struct Cocktail: Codable {
-    let strDrink: String
+public struct Cocktail: Codable {
+    public let strDrink: String
 }

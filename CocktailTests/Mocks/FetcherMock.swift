@@ -26,10 +26,9 @@ class FetcherMock: Fetcher {
         return data
     }
     
-    override func fetch(_ endpoint: Endpoint, completion: (Data) -> Void) {
+    override func fetch(_ endpoint: Endpoint, completion: @escaping (Data?) -> Void) {
         didCallFetch = true
         lastEndpoint = endpoint
-        
         let response = shouldFail ? errorResponse: successResponse
         completion(response)
     }
