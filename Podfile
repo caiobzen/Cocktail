@@ -7,6 +7,7 @@ target 'Cocktail' do
     inherit! :search_paths
     pod 'Nimble'
     pod 'Quick'
+    pod 'OHHTTPStubs'
   end
 
 post_install do |installer|
