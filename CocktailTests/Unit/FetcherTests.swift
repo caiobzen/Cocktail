@@ -25,7 +25,7 @@ class FetcherTests: QuickSpec {
                 
                 it("calls the correct endpoint with expected parameters") {
                     let endpoint = Endpoint(path: "/endpoint", param: "foo")
-
+                    
                     fetcher.fetch(endpoint) { _ in }
                     
                     expect(fetcher.lastEndpoint?.path).toEventually(equal("/endpoint"))
@@ -38,7 +38,12 @@ class FetcherTests: QuickSpec {
                         var responseObject: Codable?
                         
                         fetcher.fetch(endpoint) { response in
-                            responseObject = response
+                            switch response {
+                            case .success(let res):
+                                responseObject = res
+                            default:
+                                fail()
+                            }
                         }
                         
                         expect(responseObject).toEventuallyNot(beNil())
@@ -50,15 +55,19 @@ class FetcherTests: QuickSpec {
                     it("returns an error") {
                         fetcher.shouldFail = true
                         let endpoint = Endpoint(path: "someEndpoint", param: "?=someParam")
-                        var responseObject: Codable?
+                        var error: Error?
                         
                         fetcher.fetch(endpoint) { response in
-                            responseObject = try! JSONDecoder().decode(ResponseError.self, from: response!)
+                            switch response {
+                            case .success(_):
+                                fail()
+                            case .failure(let err):
+                                error = err
+                            }
                         }
-                        
-                        expect(endpoint.url.absoluteString).to(equal("https://www.thecocktaildb.com/api/json/v1/1/someEndpoint?=someParam"))
-                        expect(responseObject).toEventuallyNot(beNil())
-                        expect(responseObject).to(beAKindOf(ResponseError.self))
+                         expect(endpoint.url.absoluteString).to(equal("https://www.thecocktaildb.com/api/json/v1/1/someEndpoint?=someParam"))
+                        expect(error).toEventuallyNot(beNil())
+                        expect(error).to(beAKindOf(Error.self))
                     }
                 }
             }

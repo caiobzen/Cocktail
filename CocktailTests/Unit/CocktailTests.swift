@@ -26,14 +26,19 @@ class CocktailTests: QuickSpec {
                     it("returns a list of drinks") {
                         let fetcher = FetcherMock()
                         let cocktail = CocktailAPI(with: fetcher)
-                        var response: CocktailResponse? = nil
+                        var cocktailResponse: CocktailResponse? = nil
                         
-                        cocktail.searchBy(drinkName: "margherita") { result in
-                            response = result
+                        cocktail.searchBy(drinkName: "margherita") { response in
+                            switch response {
+                            case .success(let res):
+                                cocktailResponse = res
+                            case .failure(_):
+                                fail()
+                            }
                         }
                         
                         expect(fetcher.didCallFetch).to(beTrue())
-                        expect(response?.cocktails.count).toEventually(equal(5))
+                        expect(cocktailResponse?.cocktails.count).toEventually(equal(5))
                     }
                 }
             }
