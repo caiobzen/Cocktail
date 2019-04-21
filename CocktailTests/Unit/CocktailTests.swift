@@ -54,6 +54,7 @@ class CocktailTests: QuickSpec {
                         expect(firstCocktail?.category).toEventually(equal("Ordinary Drink"))
                         expect(firstCocktail?.alcoholic).toEventually(equal("Alcoholic"))
                         expect(firstCocktail?.thumbUrl).toEventually(equal("https://www.thecocktaildb.com/images/media/drink/wpxpvu1439905379.jpg"))
+                        
                         expect(firstCocktail?.ingredient1).toEventually(equal("Tequila"))
                         expect(firstCocktail?.ingredient2).toEventually(equal("Triple sec"))
                         expect(firstCocktail?.ingredient3).toEventually(equal("Lime juice"))
@@ -69,6 +70,23 @@ class CocktailTests: QuickSpec {
                         expect(firstCocktail?.ingredient13).toEventually(equal(""))
                         expect(firstCocktail?.ingredient14).toEventually(equal(""))
                         expect(firstCocktail?.ingredient15).toEventually(equal(""))
+                        
+                        expect(firstCocktail?.measure1).toEventually(equal("1 1/2 oz "))
+                        expect(firstCocktail?.measure2).toEventually(equal("1/2 oz "))
+                        expect(firstCocktail?.measure3).toEventually(equal("1 oz "))
+                        expect(firstCocktail?.measure4).toEventually(equal(""))
+                        expect(firstCocktail?.measure5).toEventually(equal(""))
+                        expect(firstCocktail?.measure6).toEventually(equal(""))
+                        expect(firstCocktail?.measure7).toEventually(equal(""))
+                        expect(firstCocktail?.measure8).toEventually(equal(""))
+                        expect(firstCocktail?.measure9).toEventually(equal(""))
+                        expect(firstCocktail?.measure10).toEventually(equal(""))
+                        expect(firstCocktail?.measure11).toEventually(equal(""))
+                        expect(firstCocktail?.measure12).toEventually(equal(""))
+                        expect(firstCocktail?.measure13).toEventually(equal(""))
+                        expect(firstCocktail?.measure14).toEventually(equal(""))
+                        expect(firstCocktail?.measure15).toEventually(equal(""))
+                        
                         expect(firstCocktail?.instructions).toEventually(equal("Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass."))
                     }
                 }
