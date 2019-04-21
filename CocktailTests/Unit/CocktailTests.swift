@@ -24,6 +24,8 @@ class CocktailTests: QuickSpec {
             
             context("#search") {
                 beforeEach {
+                    OHHTTPStubs.removeAllStubs()
+                    
                     stub(condition: isHost("www.thecocktaildb.com")) { _ in
                         let stubPath = OHPathForFile("margherita.json", type(of: self))
                         return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
@@ -49,9 +51,36 @@ class CocktailTests: QuickSpec {
                     }
                 }
                 
-                afterEach {
-                    OHHTTPStubs.removeAllStubs()
+                context("for a cocktail name with returning a failure") {
+                    beforeEach {
+                        OHHTTPStubs.removeAllStubs()
+                        
+                        stub(condition: isHost("www.thecocktaildb.com")) { _ in
+                            return OHHTTPStubsResponse(error:MockError())
+                        }
+                    }
+                    
+                    it("returns an Error") {
+                        let fetcher = Fetcher()
+                        let cocktail = CocktailAPI(with: fetcher)
+                        var error: Error? = nil
+                        
+                        cocktail.searchBy(drinkName: "margherita") { response in
+                            switch response {
+                            case .success(_):
+                                fail()
+                            case .failure(let err):
+                                error = err
+                            }
+                        }
+                        
+                        expect(error).toEventuallyNot(beNil())
+                    }
                 }
+            }
+            
+            afterSuite {
+                OHHTTPStubs.removeAllStubs()
             }
         }
     }
