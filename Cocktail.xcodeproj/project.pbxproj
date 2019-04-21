@@ -28,6 +28,7 @@
 		EB233B9B225EC4EA0015D80A /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB233B96225EBF220015D80A /* Sample.swift */; };
 		EB233B9C225EC4EF0015D80A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB233B98225EC30C0015D80A /* Main.storyboard */; };
 		EB233B9F225EC5910015D80A /* Cocktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB233B14225D6D7E0015D80A /* Cocktail.framework */; };
+		EB848F92226C9CFE008DF4DF /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB848F91226C9CFE008DF4DF /* EndpointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		EB233B8C225EBE760015D80A /* CocktailSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CocktailSample.entitlements; sourceTree = "<group>"; };
 		EB233B96225EBF220015D80A /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		EB233B98225EC30C0015D80A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EB848F91226C9CFE008DF4DF /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		EEAC46BE26365C29E1461D4E /* Pods-Cocktail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cocktail/Pods-Cocktail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 			children = (
 				EB233B22225D6D7F0015D80A /* CocktailTests.swift */,
 				EB233B43225E06570015D80A /* FetcherTests.swift */,
+				EB848F91226C9CFE008DF4DF /* EndpointTests.swift */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				EB233B23225D6D7F0015D80A /* CocktailTests.swift in Sources */,
 				EB233B44225E06570015D80A /* FetcherTests.swift in Sources */,
 				EB233B41225D858E0015D80A /* CocktailAPIMock.swift in Sources */,
+				EB848F92226C9CFE008DF4DF /* EndpointTests.swift in Sources */,
 				EB233B3F225D857E0015D80A /* FetcherMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
