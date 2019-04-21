@@ -53,6 +53,7 @@ class CocktailTests: QuickSpec {
                         expect(firstCocktail?.name).toEventually(equal("Margarita"))
                         expect(firstCocktail?.category).toEventually(equal("Ordinary Drink"))
                         expect(firstCocktail?.alcoholic).toEventually(equal("Alcoholic"))
+                        expect(firstCocktail?.glass).toEventually(equal("Cocktail glass"))
                         expect(firstCocktail?.thumbUrl).toEventually(equal("https://www.thecocktaildb.com/images/media/drink/wpxpvu1439905379.jpg"))
                         expect(firstCocktail?.tags).toEventually(equal(["IBA", "ContemporaryClassic"]))
                         expect(firstCocktail?.tagsString).toEventually(equal("IBA,ContemporaryClassic"))

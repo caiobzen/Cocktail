@@ -4,6 +4,7 @@ public struct Cocktail: Codable {
     public let alcoholic: String
     public let thumbUrl: String
     public let tagsString: String?
+    public let glass: String
     
     public let instructions: String
     public let ingredient1: String
@@ -45,6 +46,7 @@ public struct Cocktail: Codable {
         case instructions = "strInstructions"
         case thumbUrl = "strDrinkThumb"
         case tagsString = "strTags"
+        case glass = "strGlass"
         
         case ingredient1 = "strIngredient1"
         case ingredient2 = "strIngredient2"
