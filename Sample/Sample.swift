@@ -19,7 +19,7 @@ class SampleViewController: NSViewController {
             DispatchQueue.main.async {
                 switch response {
                 case .success(let res):
-                    self?.drinks.stringValue = res.cocktails.map { $0.strDrink }.joined(separator: ", ")
+                    self?.drinks.stringValue = res.cocktails.map { $0.name }.joined(separator: ", ")
                 case .failure(let err):
                     print("Error \(err)")
                 }

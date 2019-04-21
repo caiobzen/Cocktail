@@ -48,6 +48,28 @@ class CocktailTests: QuickSpec {
                         }
                         
                         expect(cocktailResponse?.cocktails.count).toEventually(equal(5))
+                        
+                        let firstCocktail = cocktailResponse?.cocktails.first
+                        expect(firstCocktail?.name).toEventually(equal("Margarita"))
+                        expect(firstCocktail?.category).toEventually(equal("Ordinary Drink"))
+                        expect(firstCocktail?.alcoholic).toEventually(equal("Alcoholic"))
+                        expect(firstCocktail?.thumbUrl).toEventually(equal("https://www.thecocktaildb.com/images/media/drink/wpxpvu1439905379.jpg"))
+                        expect(firstCocktail?.ingredient1).toEventually(equal("Tequila"))
+                        expect(firstCocktail?.ingredient2).toEventually(equal("Triple sec"))
+                        expect(firstCocktail?.ingredient3).toEventually(equal("Lime juice"))
+                        expect(firstCocktail?.ingredient4).toEventually(equal("Salt"))
+                        expect(firstCocktail?.ingredient5).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient6).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient7).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient8).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient9).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient10).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient11).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient12).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient13).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient14).toEventually(equal(""))
+                        expect(firstCocktail?.ingredient15).toEventually(equal(""))
+                        expect(firstCocktail?.instructions).toEventually(equal("Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass."))
                     }
                 }
                 
