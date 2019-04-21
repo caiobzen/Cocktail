@@ -50,6 +50,7 @@ class CocktailTests: QuickSpec {
                         expect(cocktailResponse?.cocktails.count).toEventually(equal(5))
                         
                         let firstCocktail = cocktailResponse?.cocktails.first
+                        expect(firstCocktail?.id).toEventually(equal("11007"))
                         expect(firstCocktail?.name).toEventually(equal("Margarita"))
                         expect(firstCocktail?.category).toEventually(equal("Ordinary Drink"))
                         expect(firstCocktail?.alcoholic).toEventually(equal("Alcoholic"))
