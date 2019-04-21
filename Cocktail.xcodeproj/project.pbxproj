@@ -29,6 +29,7 @@
 		EB233B9C225EC4EF0015D80A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB233B98225EC30C0015D80A /* Main.storyboard */; };
 		EB233B9F225EC5910015D80A /* Cocktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB233B14225D6D7E0015D80A /* Cocktail.framework */; };
 		EB848F92226C9CFE008DF4DF /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB848F91226C9CFE008DF4DF /* EndpointTests.swift */; };
+		EB848F94226C9F8F008DF4DF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB848F93226C9F8F008DF4DF /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		EB233B96225EBF220015D80A /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		EB233B98225EC30C0015D80A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB848F91226C9CFE008DF4DF /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		EB848F93226C9F8F008DF4DF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EEAC46BE26365C29E1461D4E /* Pods-Cocktail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cocktail/Pods-Cocktail.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 				EB233B38225D83820015D80A /* Models */,
 				EB233B2F225D7A030015D80A /* CocktailAPI.swift */,
 				EB233B31225D7B0B0015D80A /* Fetcher.swift */,
+				EB848F93226C9F8F008DF4DF /* Endpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				EB233B32225D7B0B0015D80A /* Fetcher.swift in Sources */,
 				EB233B3C225D83A10015D80A /* CocktailResponse.swift in Sources */,
 				EB233B3A225D83920015D80A /* Cocktail.swift in Sources */,
+				EB848F94226C9F8F008DF4DF /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
