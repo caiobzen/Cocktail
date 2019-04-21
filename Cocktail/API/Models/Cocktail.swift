@@ -3,6 +3,7 @@ public struct Cocktail: Codable {
     public let category: String
     public let alcoholic: String
     public let thumbUrl: String
+    public let tagsString: String?
     
     public let instructions: String
     public let ingredient1: String
@@ -37,13 +38,13 @@ public struct Cocktail: Codable {
     public let measure14: String
     public let measure15: String
     
-    
     enum CodingKeys: String, CodingKey {
         case name = "strDrink"
         case category = "strCategory"
         case alcoholic = "strAlcoholic"
         case instructions = "strInstructions"
         case thumbUrl = "strDrinkThumb"
+        case tagsString = "strTags"
         
         case ingredient1 = "strIngredient1"
         case ingredient2 = "strIngredient2"
@@ -76,5 +77,11 @@ public struct Cocktail: Codable {
         case measure13 = "strMeasure13"
         case measure14 = "strMeasure14"
         case measure15 = "strMeasure15"
+    }
+}
+
+extension Cocktail {
+    var tags: [String] {
+        return tagsString?.split{$0 == ","}.map(String.init) ?? []
     }
 }
