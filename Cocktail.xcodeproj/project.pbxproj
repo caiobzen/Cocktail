@@ -56,8 +56,6 @@
 		EB233B40225D858E0015D80A /* CocktailAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIMock.swift; sourceTree = "<group>"; };
 		EB233B43225E06570015D80A /* FetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherTests.swift; sourceTree = "<group>"; };
 		EB233B78225EB82D0015D80A /* error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = error.json; sourceTree = "<group>"; };
-		EB233B96225EBF220015D80A /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
-		EB233B98225EC30C0015D80A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB848F91226C9CFE008DF4DF /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		EB848F93226C9F8F008DF4DF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EEAC46BE26365C29E1461D4E /* Pods-Cocktail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cocktail/Pods-Cocktail.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 		EB233B0A225D6D7E0015D80A = {
 			isa = PBXGroup;
 			children = (
-				EB233B90225EBE7F0015D80A /* Sample */,
 				EB233B16225D6D7E0015D80A /* Cocktail */,
 				EB233B21225D6D7F0015D80A /* CocktailTests */,
 				EB233B15225D6D7E0015D80A /* Products */,
@@ -192,15 +189,6 @@
 				EB848F91226C9CFE008DF4DF /* EndpointTests.swift */,
 			);
 			path = Unit;
-			sourceTree = "<group>";
-		};
-		EB233B90225EBE7F0015D80A /* Sample */ = {
-			isa = PBXGroup;
-			children = (
-				EB233B96225EBF220015D80A /* Sample.swift */,
-				EB233B98225EC30C0015D80A /* Main.storyboard */,
-			);
-			path = Sample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
