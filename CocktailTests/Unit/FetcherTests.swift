@@ -65,7 +65,7 @@ class FetcherTests: QuickSpec {
                                 error = err
                             }
                         }
-                         expect(endpoint.url.absoluteString).to(equal("https://www.thecocktaildb.com/api/json/v1/1/someEndpoint?=someParam"))
+                        expect(endpoint.url.absoluteString).to(equal("https://www.thecocktaildb.com/api/json/v1/1/someEndpoint?=someParam"))
                         expect(error).toEventuallyNot(beNil())
                         expect(error).to(beAKindOf(Error.self))
                     }

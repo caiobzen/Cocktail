@@ -38,6 +38,13 @@
 			remoteGlobalIDString = EB233B13225D6D7E0015D80A;
 			remoteInfo = Cocktail;
 		};
+		EB848F8F226C9680008DF4DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB233B0B225D6D7E0015D80A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB233B7F225EBE740015D80A;
+			remoteInfo = CocktailSample;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -281,6 +288,7 @@
 			);
 			dependencies = (
 				EB233B20225D6D7F0015D80A /* PBXTargetDependency */,
+				EB848F90226C9680008DF4DF /* PBXTargetDependency */,
 			);
 			name = CocktailTests;
 			productName = CocktailTests;
@@ -320,6 +328,7 @@
 					};
 					EB233B1C225D6D7F0015D80A = {
 						CreatedOnToolsVersion = 10.2;
+						TestTargetID = EB233B7F225EBE740015D80A;
 					};
 					EB233B7F225EBE740015D80A = {
 						CreatedOnToolsVersion = 10.2;
@@ -493,6 +502,11 @@
 			isa = PBXTargetDependency;
 			target = EB233B13225D6D7E0015D80A /* Cocktail */;
 			targetProxy = EB233B1F225D6D7F0015D80A /* PBXContainerItemProxy */;
+		};
+		EB848F90226C9680008DF4DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB233B7F225EBE740015D80A /* CocktailSample */;
+			targetProxy = EB848F8F226C9680008DF4DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -705,6 +719,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CocktailSample.app/Contents/MacOS/CocktailSample";
 			};
 			name = Debug;
 		};
@@ -727,6 +742,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CocktailSample.app/Contents/MacOS/CocktailSample";
 			};
 			name = Release;
 		};

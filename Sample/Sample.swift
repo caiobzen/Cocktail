@@ -17,7 +17,12 @@ class SampleViewController: NSViewController {
         CocktailAPI(with: Fetcher()).searchBy(drinkName: drinkNameTextField.stringValue) { [weak self] response in
             print("response: \(response)")
             DispatchQueue.main.async {
-                self?.drinks.stringValue = response.cocktails.map { $0.strDrink }.joined(separator: ", ")
+                switch response {
+                case .success(let res):
+                    self?.drinks.stringValue = res.cocktails.map { $0.strDrink }.joined(separator: ", ")
+                case .failure(let err):
+                    print("Error \(err)")
+                }
             }
         }
     }

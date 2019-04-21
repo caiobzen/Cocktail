@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import OHHTTPStubs
 
 @testable import Cocktail
 
@@ -22,9 +23,16 @@ class CocktailTests: QuickSpec {
             }
             
             context("#search") {
+                beforeEach {
+                    stub(condition: isHost("www.thecocktaildb.com")) { _ in
+                        let stubPath = OHPathForFile("margherita.json", type(of: self))
+                        return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
+                    }
+                }
+                
                 context("for a cocktail name with success") {
-                    it("returns a list of drinks") {
-                        let fetcher = FetcherMock()
+                    it("returns a list of cocktails") {
+                        let fetcher = Fetcher()
                         let cocktail = CocktailAPI(with: fetcher)
                         var cocktailResponse: CocktailResponse? = nil
                         
@@ -37,9 +45,12 @@ class CocktailTests: QuickSpec {
                             }
                         }
                         
-                        expect(fetcher.didCallFetch).to(beTrue())
                         expect(cocktailResponse?.cocktails.count).toEventually(equal(5))
                     }
+                }
+                
+                afterEach {
+                    OHHTTPStubs.removeAllStubs()
                 }
             }
         }
