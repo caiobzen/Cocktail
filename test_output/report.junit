@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='CocktailTests.xctest' tests='9' failures='0'>
+  <testsuite name='CocktailTests.CocktailTests' tests='4' failures='0'>
+    <testcase classname='CocktailTests.CocktailTests' name='_Cocktail___init__creates_a_Cocktail_instance' time='0.095'/>
+    <testcase classname='CocktailTests.CocktailTests' name='_Cocktail___init__has_a_fetching_mechanism' time='0.001'/>
+    <testcase classname='CocktailTests.CocktailTests' name='_Cocktail___search__for_a_cocktail_name_with_success__returns_a_list_of_cocktails' time='0.018'/>
+    <testcase classname='CocktailTests.CocktailTests' name='_Cocktail___search__for_a_cocktail_name_with_returning_a_failure__returns_an_Error' time='0.012'/>
+  </testsuite>
+  <testsuite name='CocktailTests.EndpointTests' tests='1' failures='0'>
+    <testcase classname='CocktailTests.EndpointTests' name='_Endpoint___url__creates_an_url_with_the_expected_baseUrl__path_and_params' time='0.001'/>
+  </testsuite>
+  <testsuite name='CocktailTests.FetcherTests' tests='4' failures='0'>
+    <testcase classname='CocktailTests.FetcherTests' name='_Fetcher___init__has_an_instance_of_URLSession' time='0.001'/>
+    <testcase classname='CocktailTests.FetcherTests' name='_Fetcher___fetch__calls_the_correct_endpoint_with_expected_parameters' time='0.001'/>
+    <testcase classname='CocktailTests.FetcherTests' name='_Fetcher___fetch__with_success__returns_an_object_that_conforms_to_Codable' time='0.001'/>
+    <testcase classname='CocktailTests.FetcherTests' name='_Fetcher___fetch__with_failure__returns_an_error' time='0.001'/>
+  </testsuite>
+</testsuites>
